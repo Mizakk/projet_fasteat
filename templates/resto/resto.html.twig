@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bonjour {{ app.user.username }} ! {% endblock %}
+
+{% block body %}
+    <div class="bg-light p-3">
+        <h1>Votre profil et tableau de bord</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Numéro de téléphone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{app.user.firstname}}</td>
+                <td>{{app.user.lastname}}</td>
+                <td>{{app.user.email}}</td>
+                <td>{{app.user.phone}}</td>
+            </tr>
+        </tbody>
+    </table>            
+{% endblock %}
